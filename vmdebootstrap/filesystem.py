@@ -171,8 +171,8 @@ class Filesystem(Base):
             fstab.write('%s / %s %s 0 1\n' %
                         (rootdevstr, roottype, self.get_mount_flags(roottype)))
             if bootdevstr:
-                fstab.write('%s /boot %s %s 0 2\n' %
-                            (bootdevstr, boottype, self.get_mount_flags(boottype)))
+                fstab.write('%s %s %s %s 0 2\n' %
+                            (bootdevstr, self.settings['bootdir'], boottype, self.get_mount_flags(boottype)))
                 if self.settings['swap'] > 0:
                     fstab.write("/dev/sda3 swap swap defaults 0 0\n")
             elif self.settings['swap'] > 0:

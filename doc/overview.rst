@@ -107,6 +107,8 @@ Options
  --boottype=FSTYPE     Filesystem to use for the /boot partition. (default ext2)
  --bootflag=FLAG       Flag to set on the first partition. (default none)
  --bootoffset=SIZE     Space to leave at start of the image for bootloader
+ --bootdir=PATH        Mount point of /boot partition.
+                       Default is ``/boot/``.
  --roottype=FSTYPE     Filesystem to use for the / (root) partition. (default ext4)
  --part-type=PART-TYPE
                        Partition type to use for this image. (default msdos)
